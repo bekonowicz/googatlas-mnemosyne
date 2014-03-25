@@ -50,7 +50,7 @@ class index:
 				continue
 			else:
 				lista.append(img.get("src"))
-		return render.wyniki(lista, tytul)
+		return render.results(lista, tytul)
 
 
 
