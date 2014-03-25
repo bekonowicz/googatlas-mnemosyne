@@ -39,20 +39,19 @@ class index:
         if not form.validates(): 
 			return render.formtest(form)
         else:
-			alfa = form.d.blabla
-			r  = requests.get("https://en.wikipedia.org/wiki/" + str(alfa))
-			data = r.text
-			soup = BeautifulSoup(data)	
-			tytulik = soup.title
-			tytul = tytulik.string
-			for img in soup.find_all("img"):
-				if ".png" in img.get("src"):
-					continue
-				else:
-					lista.append(img.get("src"))
-			return render.wyniki(lista, tytul)
+		alfa = form.d.blabla
+		r  = requests.get("https://en.wikipedia.org/wiki/" + str(alfa))
+		data = r.text
+		soup = BeautifulSoup(data)	
+		tytulik = soup.title
+		tytul = tytulik.string
+		for img in soup.find_all("img"):
+			if ".png" in img.get("src"):
+				continue
+			else:
+				lista.append(img.get("src"))
+		return render.wyniki(lista, tytul)
 
-print lista
 
 
 if __name__=="__main__":
