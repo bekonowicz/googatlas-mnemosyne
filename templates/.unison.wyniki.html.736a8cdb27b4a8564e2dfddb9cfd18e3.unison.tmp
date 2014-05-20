@@ -1,0 +1,26 @@
+$def with (slownik, tytul)
+<head>
+<link rel="stylesheet" href="./static/jQueryUI/css/ui-lightness/jquery-ui-1.10.4.css" />
+<script src="./static/jquery.js"></script>
+<script src="./static/jQueryUI/js/jquery-ui-1.10.4.min.js"></script>
+	<script src="./static/script.js"></script>	
+</head>
+
+<body>
+<h1>
+$tytul
+</h1>
+
+$for key, value in slownik.iteritems():
+  <div id="draggable">
+	<img src="
+	$key
+	" alt="
+	$value
+	">
+</div>
+
+
+
+<br><br>
+</body>
