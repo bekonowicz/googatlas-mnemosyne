@@ -1,5 +1,4 @@
-* Flask version under construction.
-
+Currently developing Flask edition (flask-ver branch).
 
 
 
