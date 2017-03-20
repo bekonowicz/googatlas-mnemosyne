@@ -1,7 +1,6 @@
 <!doctype html>
 <html>
 <head>
-  <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 
@@ -9,14 +8,29 @@
   <title>Hello</title>
   <div class="container narrow">
     <h1>Hi</h1>
+    <div class="navbar">
+      <a href="/">////</a>
+      <form action = "/" method = "POST">
+           <p>Keyword <input type = "text" name = "keyword" /></p>
+           <p><input type = "submit" value = "submit" /></p>
+      </form>
+    </div>
     <div>
-      <!--  put for loop here -->
+      <!-- <form action="/save" method = "POST">
+        <input type="text" name="forward">
+        <input type="submit" value="submit">
+      </form> -->
+
+    <!--  the second form has to be fed to another function by 'action' -->
+    </div>
+    <div>
+      <form action="/save" method="POST">
       {% for key, value in results.items() %}
-        <p>{{ key }}</p>
-        <p>{{ value }}</p>
-        <br />
+        <a href="{{ value }}" target="blank"><img src="{{ key }}"></a>
+        <input type="checkbox" name="pick" value="{{ value }}">
       {% endfor %}
-      <!--  z jakiegoś powodu zassało dwa razy każdy element -->
+      <input type="submit" value="submit">
+      </form>
     </div>
   </div>
 
